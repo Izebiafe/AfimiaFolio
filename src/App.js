@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import Navbar from "./components/layouts/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skill from "./components/Skill";
+import Project from "./components/Project";
+import Blog from "./components/Blog";
+import Contact from "./components/Contact";
+import Footer from "./components/layouts/Footer";
+import { Analytics } from '@vercel/analytics/react';
 
-function App() {
+function App({ children }) {
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    return savedMode === "dark";
+  });
+
+  const handleDarkMode = () => {
+    setDarkMode((prevDarkMode) => !prevDarkMode);
+  };
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode ? "dark" : "light");
+    const localTheme = localStorage.getItem("darkMode");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [darkMode]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`${darkMode ? "dark" : ""} font-Poppins`}>
+      {children}
+      <Analytics />
+      <Navbar dark={handleDarkMode} data={darkMode} />
+      <main>
+        <Hero />
+        <About /> 
+        <Skill /> 
+        <Project />
+        <Blog />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
