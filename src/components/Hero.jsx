@@ -95,7 +95,7 @@ function Hero() {
               Mail Me
             </a>
             <a
-              href="https://drive.google.com/file/d/1Pf6WkcfjZY4F-ash5zu2v4X1rJuZITvG/view?usp=sharing"
+              href="https://docs.google.com/document/d/1_Z4IdUXV2W7glo8UuYCATbBEhy9-l85o8UJomKgz31s/edit?usp=sharing"
               rel="noreferrer"
               target="_blank"
               className="p-3 px-4 text-newDarkGray font-bold bg-transparent border-2 border-newYellow rounded-md flex gap-1 dark:text-white hover:bg-newYellow hover:text-white"

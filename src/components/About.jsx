@@ -58,7 +58,7 @@ function About() {
               <span className="font-semibold">Afimiafidelis95@gmail.com</span>
               <div>
                 <a
-                  href="https://drive.google.com/file/d/1Pf6WkcfjZY4F-ash5zu2v4X1rJuZITvG/view?usp=sharing"
+                  href="https://docs.google.com/document/d/1_Z4IdUXV2W7glo8UuYCATbBEhy9-l85o8UJomKgz31s/edit?usp=sharing"
                   rel="noreferrer"
                   target="_blank"
                   className="p-3 px-6 w-36 my-7 text-white font-bold bg-newYellow rounded-md flex gap-1 justify-center hover:bg-transparent hover:text-newDarkGray hover:border-2 hover:border-newYellow dark:hover:text-white"
