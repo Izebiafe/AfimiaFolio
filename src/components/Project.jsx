@@ -8,8 +8,8 @@ import {
 } from '@heroicons/react/24/outline';
 import { LiaEnvelopeSolid } from 'react-icons/lia';
 
-import leaderboard from '../assets/images/leaderboard.jpg';
-import portfolio from '../assets/images/portfolio.jpg';
+import wephco from '../assets/images/wephco.jpg';
+import bsiim from '../assets/images/bsiim.jpg';
 import bookstore from '../assets/images/bookstore.jpg';
 import weather from '../assets/images/weather.jpg';
 
@@ -17,23 +17,23 @@ function Project() {
   const [projects, setProjects] = useState([
     {
       id: 1,
-      title: 'Leaderboard',
-      image: leaderboard,
+      title: 'Wephco',
+      image: wephco,
       details:
-        'Leaderboard is a way to track the performance of teams in a competitive environment. It is displayed as a list, with the teams ranked by their scores. Leaderboards provide a sense of accomplishment, and to create a sense of community. ',
-      techStack: 'HTML, CSS, JavaScript, Web-Pack',
-      live: 'https://leaderboard-navy-six.vercel.app/',
-      source: 'https://github.com/Izebiafe/Leaderboard',
+        'Wephco is a leading real estate company providing comprehensive services in both Nigeria and the United Arab Emirates (UAE). With a commitment to excellence, innovation, and customer satisfaction, Wephco has established itself as a trusted partner in the real estate industry, offering a wide range of services tailored to meet the diverse needs of clients in both regions. ',
+      techStack: 'HTML, CSS, JavaScript, ReactJS, Tailwind CSS, DaisyUI, API',
+      live: 'https://wephco-website-blush.vercel.app/',
+      source: 'https://github.com/Wephco/wephco-website',
     },
     {
       id: 2,
-      title: 'Portfolio Template',
-      image: portfolio,
+      title: 'Bsiim',
+      image: bsiim,
       details:
-        'Portfolio template is designed to be user-friendly and easy to navigate. You can learn more about me and my work by exploring the different sections, including my projects, work experience, and education.',
-      techStack: 'HTML, CSS, JavaScript',
-      live: 'https://afimiaportfolio.vercel.app/',
-      source: 'https://github.com/Izebiafe/afimiaportfolio',
+        'Bsiim provide effective services to users based on membership using models, programs, solutions and the platform',
+      techStack: 'HTML, CSS, JavaScript, ReactJS, Tailwind CSS, DaisyUI, API',
+      live: 'https://deploy-preview-5--distracted-mayer-645d32.netlify.app/',
+      source: 'https://github.com/nsilva1/bsiim',
     },
     {
       id: 3,
@@ -130,11 +130,11 @@ function Project() {
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
             {sortedProjects.map((item, index) => (
               <div className="" key={item.id}>
-                <div className="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
-                  <img src={item.image} alt={item.title} />
-                  <a onClick={() => openModal(index)}>
-                    <div className="mask absolute inset-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)] text-newYellow" />
-                  </a>
+                <div className="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20" style={{ height: "300px" }}>
+                  <img src={item.image} alt={item.title} className="object-cover w-full h-full" />
+                    <a onClick={() => openModal(index)}>
+                      <div className="mask absolute inset-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,0.2)] text-newYellow" />
+                    </a>
                 </div>
                 <h5
                   className="mb-4 text-lg font-bold cursor-pointer hover:text-newYellow dark:text-white dark:hover:text-newYellow"
