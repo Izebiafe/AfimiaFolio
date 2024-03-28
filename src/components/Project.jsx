@@ -52,7 +52,7 @@ function Project() {
       details:
         "weather web application made using HTML5, CSS3, and JavaScript. It's working process is simple. It takes the name of the City as input from the -user and create a HTTP request and send it to Openweathermap.org API to get back the deatils in the form of a JSON Response.",
       techStack: 'HTML, CSS, JavaScript, Web-Pack',
-      live: 'https://vercel.com/izebiafe/airtrackr/3RHyZvsC3mriFdorn3Xx7CXoYdbM',
+      live: 'https://airtrackr-ten.vercel.app/',
       source: 'https://github.com/Izebiafe/airtrackr',
     },
   ]);
